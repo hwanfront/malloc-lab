@@ -5,8 +5,18 @@ TEAM = bovik
 VERSION = 1
 HANDINDIR = /afs/cs.cmu.edu/academic/class/15213-f01/malloclab/handin
 
+# # in ubuntu for 32bit
+# CC = gcc
+# CFLAGS = -Wall -O2 -m32
+
+# in ubuntu 64bit
 CC = gcc
-CFLAGS = -Wall -O2 -m32
+CFLAGS = -Wall -O2 -m64
+
+# # in Apple silicon Mac Rosetta2
+# # https://david61song.github.io/posts/malloclab-Intro/
+# CC = clang
+# CFLAGS = -Wall -arch x86_64 -Wno-unused-function -Wno-unused-parameter -g
 
 OBJS = mdriver.o mm.o memlib.o fsecs.o fcyc.o clock.o ftimer.o
 
